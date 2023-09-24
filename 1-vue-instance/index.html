@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
@@ -16,7 +17,11 @@
         v-bind:alt="eduflow.alt"
         v-bind:okul="owner">
         {{ eduflow.title }}</a>
-        <button>Tıklayın</button>
+        <br><br>
+        <button v-on:click="changeTitle('Bu 1.buton')">Title 1 değiştir</button>
+        <button v-on:click="changeTitle('Bu 2.buton')">Title 2 değiştir</button>
+        <div @mousemove="updateCoords('mouseMove', $event)" class="box" @click="changeTitle('Box üzerinden gelen')"></div>
+        <span>{{ coords.x }},{{ coords.y }}</span>
     </div>
     <script src="app.js"></script>
 </body>
