@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
-    
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <p>{{ content }}</p>
+        <a 
+        v-bind:target="eduflow.target" 
+        v-bind:href="eduflow.url" 
+        v-bind:alt="eduflow.alt"
+        v-bind:okul="owner">
+        {{ eduflow.title }}</a>
+        <button>Tıklayın</button>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
